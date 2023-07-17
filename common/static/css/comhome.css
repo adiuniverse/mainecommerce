@@ -1,0 +1,59 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+
+}
+
+  content{
+    width: 100vw;
+    height: 100vh;
+    background: url(../IMAGES/5.webp); 
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+} 
+
+
+.tour h1{
+    margin-bottom: 300px;
+    font-size: 7vmin;
+    color:yellowgreen;
+   
+   
+}
+
+ul{
+    list-style-type: none;
+}
+
+.navbar{
+    width: 100vw;
+    display: flex;
+   justify-content: space-between;
+   color:#fc036b; 
+   padding: 10px;
+     background-color:black;
+
+}
+.logo{
+    font-size: 4vmin;
+
+}
+
+.nav-links{
+    display: flex;
+   align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+    
+}
+li{
+    margin-right: 20px;
+}

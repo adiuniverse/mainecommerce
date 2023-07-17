@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hai li a{
+    text-decoration: none;
+    color: #fc036b;
+}

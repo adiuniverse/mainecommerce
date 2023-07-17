@@ -1,0 +1,72 @@
+{% extends 'like/customermaster.html' %}
+{% load static %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>{% block title %}CUSTOMERHOME{% endblock %}</title>
+    {% block link %}
+    <link rel="stylesheet"  href="{% static 'css/cushome.css' %}">
+    {% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><h1>ECOMMERCE</h1></div>
+        <ul class="menu">
+            <li><a href="{% url 'custhome' %}" class="active">Home</a></li>
+            <li><a href="{% url 'mycart' %}">MyCart</a></li>
+            <li><a href="{% url 'myorder' %}">MyOrder</a></li>
+            <li><a href="{% url 'custchangepassword' %}">ChangePassword</a></li>
+            <li><a href="{% url 'profilee' %}">Profile</a></li>
+            <li><a href="{% url 'custlogout' %}">Logout</a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+</ul>
+        
+    </nav>
+    {% block content %}
+    <section class="content">
+        <h1>New Arrivals For Men And Women</h1>
+        <p>Get The Best Women Fashion Arrivals</p>
+        <button>Shop Now</button>
+    </section>
+
+    <h1 class="pheading">Our Latest Products</h1>
+
+    <section class="sec">
+        <div class="products">
+           
+                 <!-- card start -->
+                 {% for p in product_list %}
+
+                 <div class="card">
+                    <div class="img"><img src="{{p.image.url}}"></div>
+                    <div class="title">{{p.product_name}}</div>
+                    <div class="desc">{{p.description}}</div>
+                    <div class="box">
+                         <div class="price">Rs {{p.price}}</div>
+                         <a class="btn" href="{% url 'customer:productdetails' p.id  %}">View</a>
+                         <br>
+                         
+                     </div>    
+                     <div class="desc">Seller - {{p.seller.seller_name|title }} </div>
+                 </div>
+
+                 {% endfor %}
+     
+                 <!-- card end -->
+                   
+          
+           
+ 
+           
+
+        </div>
+
+    </section>
+
+  {% endblock %}
+    
+</body>
+</html>
